@@ -5,3 +5,4 @@
 * Deliver the Message: [Problem](https://www.lintcode.com/en/problem/deliver-the-message/);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LintCode/lintcode_deliver-the-message.java).
 * Same Number: [Problem](https://www.lintcode.com/problem/same-number/);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LintCode/lintcode_same-number.java).
 * Reverse Order Storage: [Problem](https://www.lintcode.com/problem/reverse-order-storage);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LintCode/lintcode_reverse-order-storage.java).
+* Walls and Gates: [Problem](https://www.lintcode.com/problem/walls-and-gates);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LintCode/lintcode_walls-and-gates.java).
