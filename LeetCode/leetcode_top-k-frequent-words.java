@@ -5,30 +5,6 @@
 * Space: O(n)
 */
 class Solution {
-    
-    private class Word implements Comparable<Word> {
-        private String content;
-        private int frequency;
-        
-        public Word(String content, int frequency){
-            this.content = content;
-            this.frequency = frequency;
-        }
-        
-        public String getContent(){
-            return content;
-        }
-        
-        public int getFrequency(){
-            return frequency;
-        }
-        
-        public int compareTo(Word w){
-            return this.getFrequency() == w.getFrequency() ? w.getContent().compareTo(this.getContent()) : 
-                    (this.getFrequency() - w.getFrequency());
-        }
-    };
-    
     private Map<String,Integer> frequencyOfWords;
     
     public Solution(){
@@ -36,38 +12,43 @@ class Solution {
     }
     
     public List<String> topKFrequent(String[] words, int k) {
-        final List<String> ans = new ArrayList<>();
         if(words.length == 0 || k == 0){
-            return ans;
+            return Collections.emptyList();
         }
         
         buildFrequencyOfWords( words );
         
-        PriorityQueue<Word> pq = new PriorityQueue<>();
-        for(Map.Entry<String, Integer> entry : frequencyOfWords.entrySet()){
-            Word word = new Word(entry.getKey(), entry.getValue());
-            pq.add(word);
-            if(pq.size() > k){
-                pq.poll();
-            }
-        }
+        PriorityQueue<String> pq = new PriorityQueue<>( (w1, w2) -> 
+            frequencyOfWords.get( w1 ).equals( frequencyOfWords.get( w2 ) ) ? 
+                w2.compareTo( w1 ) : frequencyOfWords.get( w1 ) - frequencyOfWords.get( w2 ) 
+        );
+        findTopKFrequentElements( pq, k );
         
-        while(!pq.isEmpty()){
-            ans.add(pq.poll().getContent());
-        }
-        Collections.reverse(ans);
-        
-        return ans;
+        return buildElementsList( pq );
     }
     
     private void buildFrequencyOfWords( String[] words ){
         for(String word : words){
-            if(frequencyOfWords.containsKey(word)){
-                int currentFrequency = frequencyOfWords.get( word ) + 1;
-                frequencyOfWords.put(word, currentFrequency);
-            } else {
-                frequencyOfWords.put(word, 1);
+            frequencyOfWords.put( word, frequencyOfWords.getOrDefault( word, 0 ) + 1 );
+        }
+    }
+    
+    private void findTopKFrequentElements( PriorityQueue<String> pq, int k ){
+        for(String word : frequencyOfWords.keySet()){
+            pq.offer( word );
+            if(pq.size() > k){
+                pq.poll();
             }
         }
+    }
+    
+    private List<String> buildElementsList( PriorityQueue<String> pq ){
+        final List<String> ans = new ArrayList<>();
+        while(!pq.isEmpty()){
+            ans.add(pq.poll());
+        }
+        Collections.reverse(ans);
+        
+        return ans;
     }
 }
