@@ -12,3 +12,4 @@
 * Find Anagram Mappings: [Problem](https://leetcode.com/problems/find-anagram-mappings);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LeetCode/leetcode_find-anagram-mappings.java).
 * Design In Memory File System: [Problem](https://leetcode.com/problems/design-in-memory-file-system);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LeetCode/leetcode_design-in-memory-file-system.java).
 * Maximum Length of Pair Chain: [Problem](https://leetcode.com/problems/maximum-length-of-pair-chain);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LeetCode/leetcode_maximum-length-of-pair-chain.java).
+* Jewels and Stones: [Problem](https://leetcode.com/problems/jewels-and-stones);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LeetCode/leetcode_jewels-and-stones.java).
