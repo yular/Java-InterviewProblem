@@ -15,3 +15,4 @@
 * Jewels and Stones: [Problem](https://leetcode.com/problems/jewels-and-stones);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LeetCode/leetcode_jewels-and-stones.java).
 * Image Smoother: [Problem](https://leetcode.com/problems/image-smoother);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LeetCode/leetcode_image-smoother.java).
 * Split BST: [Problem](https://leetcode.com/problems/split-bst);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LeetCode/leetcode_split-bst.java).
+* Partition Labels: [Problem](https://leetcode.com/problems/partition-labels);   [Code](https://github.com/yular/Java-InterviewProblem/blob/master/LeetCode/leetcode_partition-labels.java).
